@@ -8,11 +8,15 @@ function ExerciseCard({ exercise, onSelect, isInPlan = false }) {
     <Card>
       <h3>{exercise.name}</h3>
       <p>{exercise.muscle} • {exercise.category}</p>
+
+      <div>
       <Badge label={exercise.difficulty} />
+      </div>
 
       {/* Show a green note only when the exercise is in the plan */}
       {isInPlan && <p style={{ color: 'green' }}>✓ In your plan</p>}
 
+      <div style={{ marginTop: 8 }}></div>
       <Button
         text={isInPlan ? 'Added' : 'View Details'}
         variant={isInPlan ? 'secondary' : 'primary'}
