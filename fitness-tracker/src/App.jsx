@@ -1,14 +1,12 @@
-import Button from './components/Button';
-import Card from './components/Card';
-import Badge from './components/Badge';
+import exercises from './data/exercises';
+import ExerciseList from './components/ExerciseList';
 
 function App() {
   return (
-    <div>
-      <h1>Fitness Tracker</h1>
-      <Card><h2>Push-Up</h2><p>Great for chest.</p><Badge label="Expert"/></Card>
-      
-    </div>
+    <ExerciseList
+      exercises={exercises}
+      onExerciseClick={(id) => console.log('clicked', id)}
+    />
   );
 }
 export default App;
